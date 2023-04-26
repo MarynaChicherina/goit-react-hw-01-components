@@ -9,8 +9,6 @@ const FriendListItem = ({ avatar, name, isOnline }) => {
        <img className='avatar' src={avatar} alt='User avatar' width='48px' />
        <p className='name'>{name}</p>
        </>
-
-
     )
   }
 
