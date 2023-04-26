@@ -1,7 +1,11 @@
 import user from './Profile/user.json';
 import Profile from './Profile/Profile';
+import data from './Statistics/data.json';
+import Statistics from './Statistics/Statistics';
+
 
 export const App = () => {
+  const title = true;
   return (
     <div
       style={{
@@ -22,6 +26,7 @@ export const App = () => {
     statsLikes={user.stats.likes}
     statsViews={user.stats.views}
   />
+  {title ? <Statistics title='Upload stats' stats={data} /> : <Statistics stats={data} />}
     </div>
   );
 };
