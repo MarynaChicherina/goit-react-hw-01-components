@@ -1,4 +1,5 @@
 import FriendListItem from "components/FriendListItem/FriendListItem";
+import PropTypes from 'prop-types';
 
 
 const FriendList = ({ friends }) => {
@@ -20,5 +21,8 @@ const FriendList = ({ friends }) => {
     )
   }
 
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(PropTypes.shape)    
+}
 
   export default FriendList
