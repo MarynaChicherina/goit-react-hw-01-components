@@ -4,10 +4,11 @@ import data from './Statistics/data.json';
 import Statistics from './Statistics/Statistics';
 import friends from './FriendList/friends.json';
 import FriendList from './FriendList/FriendList';
+import transactions from './TransactionHistory/transactions.json';
+import TransactionHistory from './TransactionHistory/TransactionHistory';
 
 
 export const App = () => {
-  const title = true;
   return (
     <div
       style={{
@@ -28,8 +29,9 @@ export const App = () => {
     statsLikes={user.stats.likes}
     statsViews={user.stats.views}
   />
-  {title ? <Statistics title="Upload stats" stats={data} /> : <Statistics stats={data} />}
+  {data.title = undefined ? <Statistics stats={data} /> : <Statistics title="Upload stats" stats={data} />}
   <FriendList friends={friends} />
+  <TransactionHistory items={transactions} />
     </div>
   );
 };
