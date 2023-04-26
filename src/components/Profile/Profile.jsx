@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Profile = ({ username, tag, location, avatar, statsFollowers, statsLikes, statsViews }) => {
+const Profile = ({ username, tag, location, avatar, stats }) => {
 
     return (
       <div className='profile'>
@@ -13,15 +13,15 @@ const Profile = ({ username, tag, location, avatar, statsFollowers, statsLikes, 
       <ul className='stats'>
         <li>
          <span className='label'>Followers</span>
-         <span className='quantity'>{statsFollowers}</span>
+         <span className='quantity'>{stats.followers}</span>
         </li>
         <li>
          <span className='label'>Views</span>
-         <span className='quantity'>{statsViews}</span>
+         <span className='quantity'>{stats.views}</span>
         </li>
         <li>
          <span className='label'>Likes</span>
-         <span className='quantity'>{statsLikes}</span>
+         <span className='quantity'>{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -33,9 +33,12 @@ const Profile = ({ username, tag, location, avatar, statsFollowers, statsLikes, 
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string,
-    statsLikes: PropTypes.number.isRequired,
-    statsViews: PropTypes.number.isRequired,
-    statsFollowers: PropTypes.number.isRequired,
+    stats: PropTypes.shape({
+      likes: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      followers: PropTypes.number.isRequired,
+    })
+
   };
 
   export default Profile
