@@ -45,7 +45,8 @@ font-size: 16px;
 `
 export const StatsQuantity = styled.span`
 display: block;
-font-weight: 500;
+font-weight: 700;
+font-size: 20px;
 margin: 0;
 padding: 0;
 `
