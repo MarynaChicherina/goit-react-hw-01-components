@@ -26,8 +26,6 @@ display: flex;
     margin-top: 0;
     padding: 0;
 font-size: 18px;
-
-background-color: rgb(0,153,255);
 `
 export const StatisticsItem = styled.li`
 margin: 0;
@@ -35,9 +33,23 @@ text-align: center;
 border-color: grey;
 min-width: 40px;
 padding: 15px 10px;
- &:not(:last-child) {
-    border-right: 1px dashed grey;
- }
+
+ background-color: ${props => {
+    switch(props.type) {
+        case '.docx' :
+            return '#46b7c2';
+        case '.pdf' :
+            return '#bf42f5';
+        case '.mp3' :
+            return '#e691cd';
+        case '.psd' :
+            return '#e04f64';
+        default:
+            return 'rgb(0,153,255)' 
+    }
+ }}
+
+
 `
 export const StatisticsLabel = styled.span`
 margin: 0;

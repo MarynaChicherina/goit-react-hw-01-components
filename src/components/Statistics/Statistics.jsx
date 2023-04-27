@@ -12,7 +12,7 @@ return (
         {
             stats.map((stat) => (
                 
-                <StatisticsItem key={stat.id} >
+                <StatisticsItem key={stat.id} type={stat.label}>
                     <>
                     <StatisticsLabel>{stat.label}</StatisticsLabel>
                     <StatisticsPercentage>{stat.percentage}%</StatisticsPercentage>
