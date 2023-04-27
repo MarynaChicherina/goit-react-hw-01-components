@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 
+const setBgColor = props => {
+    switch(props.fileType) {
+        case '.docx' :
+            return '#46b7c2';
+        case '.pdf' :
+            return '#bf42f5';
+        case '.mp3' :
+            return '#e691cd';
+        case '.psd' :
+            return '#e04f64';
+        default:
+            return 'rgb(0,153,255)' 
+    }
+ }
+
 export const StatisticsSection = styled.div`
 width: 300px;
 padding: 0;
@@ -33,23 +48,7 @@ text-align: center;
 border-color: grey;
 min-width: 40px;
 padding: 15px 10px;
-
- background-color: ${props => {
-    switch(props.type) {
-        case '.docx' :
-            return '#46b7c2';
-        case '.pdf' :
-            return '#bf42f5';
-        case '.mp3' :
-            return '#e691cd';
-        case '.psd' :
-            return '#e04f64';
-        default:
-            return 'rgb(0,153,255)' 
-    }
- }}
-
-
+background-color: ${setBgColor}
 `
 export const StatisticsLabel = styled.span`
 margin: 0;
