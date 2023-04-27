@@ -13,9 +13,8 @@ width: 300px;
 padding: 0;
 text-align: center; 
 background-color: white;
-&:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 `
 export const StatsElement = styled.li`
 margin: 0;
@@ -34,7 +33,7 @@ display: flex;
     margin-top: 0;
     padding: 0;
 font-size: 18px;
-background-color: rgba(0, 0, 0, 0.16);
+background-color: rgba(0, 0, 0, 0.10);
 border-top: 1px dashed grey;
 `
 export const StatsLabel = styled.span`
