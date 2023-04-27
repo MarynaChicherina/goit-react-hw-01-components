@@ -5,26 +5,30 @@ import { Image, ProfileCard, StatsCard, StatsElement, StatsLabel, StatsQuantity,
 const Profile = ({ username, tag, location, avatar, stats }) => {
 
     return (
-      <ProfileCard className='profile'>
+      <ProfileCard>
       <div className='description'>
-        <Image src={avatar} alt='User avatar' className='avatar' /> 
-        <ProfileName className='name'>{username}</ProfileName>
-        <ProfileTag className='tag'>@{tag}</ProfileTag>
-        <ProfileLocation className='location'>{location}</ProfileLocation>
+        <Image src={avatar} alt='User avatar'  /> 
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag>@{tag}</ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
       </div>
-      <StatsCard className='stats'>
+      <StatsCard>
+
         <StatsElement>
-         <StatsLabel className='label'>Followers</StatsLabel>
-         <StatsQuantity className='quantity'>{stats.followers}</StatsQuantity>
+         <StatsLabel>Followers</StatsLabel>
+         <StatsQuantity>{stats.followers}</StatsQuantity>
         </StatsElement>
+
         <StatsElement>
-         <StatsLabel className='label'>Views</StatsLabel>
-         <StatsQuantity className='quantity'>{stats.views}</StatsQuantity>
+         <StatsLabel>Views</StatsLabel>
+         <StatsQuantity>{stats.views}</StatsQuantity>
         </StatsElement>
+
         <StatsElement>
-         <StatsLabel className='label'>Likes</StatsLabel>
-         <StatsQuantity className='quantity'>{stats.likes}</StatsQuantity>
+         <StatsLabel>Likes</StatsLabel>
+         <StatsQuantity>{stats.likes}</StatsQuantity>
         </StatsElement>
+        
       </StatsCard>
     </ProfileCard>
     )

@@ -19,21 +19,23 @@ background-color: white;
 
 `
 export const StatsElement = styled.li`
-margin: 0 auto;
+margin: 0;
 text-align: center;
 border-color: grey;
-width: 80px;
-text-align: center;
-
+min-width: 80px;
+padding: 15px 10px;
+ &:not(:last-child) {
+    border-right: 1px dashed grey;
+ }
 `
 export const StatsCard = styled.ul`
 display: flex;
     list-style: none;
     margin-bottom: 0;
     margin-top: 0;
-    padding: 15px 5px;
+    padding: 0;
 font-size: 18px;
-text-align: justify;
+
 background-color: rgba(0, 0, 0, 0.16);
 border-top: 1px dashed grey;
 `
@@ -51,14 +53,13 @@ display: block;
 font-weight: 500;
 margin: 0;
 padding: 0;
-
 `
-
 export const ProfileName = styled.p`
 font-weight: 500;
 margin-bottom: 10px;
 margin-top: 10px;
 font-size: 24px;
+text-transform: uppercase;
 `
 export const ProfileTag = styled.p`
 margin-top: 0;
