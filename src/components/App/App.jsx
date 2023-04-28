@@ -11,15 +11,7 @@ import { Container } from './App.styled';
 
 export const App = () => {
   return (
-    <Container
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 20,
-        color: '#010101'
-      }}
-    >
+    <Container>
   <Profile
     username={user.username}
     tag={user.tag}
